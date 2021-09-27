@@ -8,6 +8,8 @@ The SWO port can then be connected to the SWO pin of an SWD-capabable debugger (
 
 The demo is written for an ST Nucleo-F103RB with its on-board STLink.
 
+The main work has actually already been done by the people in this thread: https://community.platformio.org/t/viewing-swo-output-within-pio/13853
+
 ## Inner workings
 
 OpenOCD is started in a configuration that opens a TCL server (port 6666) and forwards the SWO data to the TCL server.
