@@ -25,7 +25,7 @@ def swo_viewer_task(*args, **kwargs):
         assert debug.get("openocd_target"), (
             "Missed target configuration for %s" % board.id)
         server_args.extend([
-            "-f", "interface/%s.cfg" % link,
+            "-f", "interface/%s.cfg" % upload_protocol,
             "-c", "transport select %s" % (
                 "hla_swd" if upload_protocol == "stlink" else "swd"),
             "-f", "target/%s.cfg" % debug.get("openocd_target")
