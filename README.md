@@ -27,7 +27,7 @@ swo_trace_clkin_freq = 64000000
 and 
 
 ```py
-  -c "tpiu config internal - uart off 64000000"
+  -c "nucleo_f103rb.tpiu configure -traceclk 64000000"
 ```
 
 clock values. This **must** be the HCLK frequency / CPU frequency that the microcontroller is setup to run with in the firmware.
