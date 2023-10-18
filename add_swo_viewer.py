@@ -6,6 +6,7 @@ import sys
 Import("env")
 
 def swo_viewer_task(*args, **kwargs):
+    os.environ['PYTHONUNBUFFERED'] = '1'
     print("Entrypoint")
     board = env.BoardConfig()
     platform = env.PioPlatform()
