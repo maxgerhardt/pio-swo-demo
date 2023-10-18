@@ -1,12 +1,12 @@
 from swo_parser import swo_parser_main
 import subprocess
-from os import path, __file__
+from os import environ, path, __file__
 import time
 import sys
 Import("env")
 
 def swo_viewer_task(*args, **kwargs):
-    os.environ['PYTHONUNBUFFERED'] = '1'
+    environ['PYTHONUNBUFFERED'] = '1'
     print("Entrypoint")
     board = env.BoardConfig()
     platform = env.PioPlatform()
